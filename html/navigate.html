@@ -1,0 +1,127 @@
+<!-- Navbar -->
+<nav class="navbar navbar-right navbar-expand-lg">
+
+  <!-- Container -->
+  <div class="container-fluid">
+
+    <!-- Logo -->
+    <a class="nav-link" 
+       ng-class="{'disabled': state.id==='user'}" 
+       ui-sref="home">
+      <img class="logo" 
+           src="./media/image/logo/logo.jpg" 
+           alt="Your Logo">
+    </a>
+
+    <!-- Hamburger icon -->
+    <button class="navbar-toggler bg-light" 
+            type="button" 
+            data-bs-toggle="collapse" 
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav" 
+            aria-expanded="false" 
+            aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon bg-light"></span>
+    </button>
+
+    <!-- Navbar container -->
+    <div class="collapse navbar-collapse mt-2 mt-md-0" 
+         id="navbarNav">
+
+      <!-- Left align -->
+      <div class="navbar-left me-auto">
+
+        <!-- Navigate -->
+        <ul class="navbar-nav">
+
+          <!--Home-->
+          <li class="nav-item">
+            <a class="nav-link text-lowercase mt-2"
+               ng-class="{'active cursor-default text-decoration-underline 
+                         fw-bold fs-6 text-uppercase': state.id === 'home'}"
+               ui-sref="home">
+              <span>
+                <p class="hover-underline-animation navfont">
+                  {{'home_page' | translate:lang.data}}
+                </p>
+              </span>
+            </a>
+          </li>
+
+          <!--Introduction-->
+          <li class="nav-item">
+            <a class="nav-link text-lowercase mt-2"
+               ng-class="{'active cursor-default text-decoration-underline 
+                         fw-bold fs-6 text-uppercase': state.id === 'introduction'}"
+               ui-sref="introduction">
+              <span>
+                <p class="hover-underline-animation navfont">
+                  {{'introduction' | translate:lang.data}}
+                </p>
+              </span>
+            </a>
+          </li>
+
+          <!--Courses-->
+          <li class="nav-item">
+            <a class="nav-link text-lowercase mt-2"
+               ng-class="{'active cursor-default text-decoration-underline 
+                        fw-bold fs-6 text-uppercase': state.id === 'courses'}"
+               ui-sref="courses">
+              <span>
+                <p class="hover-underline-animation navfont">
+                  {{'courses' | translate:lang.data}}
+                </p>
+              </span>
+            </a>
+          </li>
+
+          <!--Community-->
+          <li class="nav-item">
+            <a class="nav-link text-lowercase mt-2"
+               ng-class="{'active cursor-default text-decoration-underline 
+                        fw-bold fs-6 text-uppercase': state.id === 'community'}"
+               ui-sref="community">
+              <span>
+                <p class="hover-underline-animation navfont">
+                  {{'community' | translate:lang.data}}
+                </p>
+              </span>
+            </a>
+          </li>
+
+          <!--Contact-->
+          <li class="nav-item">
+            <a class="nav-link text-lowercase mt-2"
+               ng-class="{'active cursor-default fw-bold fs-6 
+                         text-uppercase': state.id === 'contact'}"
+               ui-sref="contact">
+              <span>
+                <p class="hover-underline-animation navfont">
+                 {{'contact' | translate:lang.data}}
+                </p>
+              </span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Right align -->
+      <div class="navbar-right ms-auto">
+
+        <div class="navbar-right ms-auto">
+
+          <!-- Navigate -->
+          <ul class="navfont list-unstyled">
+
+            <!-- User -->
+				    <ng-navbar-user></ng-navbar-user>
+
+            <!-- Language -->
+				    <ng-navbar-language></ng-navbar-language>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
